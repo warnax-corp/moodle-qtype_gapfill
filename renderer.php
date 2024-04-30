@@ -411,6 +411,8 @@ class qtype_gapfill_renderer extends qtype_with_combined_feedback_renderer {
      * @return array
      */
     public function get_dropdown_list() {
+        // sort @warnax
+        sort($this->allanswers);
         /* convert things like &gt; to > etc */
         foreach ($this->allanswers as $key => $value) {
             $this->allanswers[$key] = htmlspecialchars_decode(trim($value));
